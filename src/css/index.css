@@ -801,7 +801,8 @@ input[type=radio]:checked + label{
 
 /* hovering container for each product */
 .product:hover {	
-	padding: calc(var(--common-padding)/4);
+	/* padding: calc(var(--common-padding)/4); */
+	opacity: 0.5;
  	box-shadow: 0px 15px 37px -15px rgba(174,174,174,0.93)
 }
 
