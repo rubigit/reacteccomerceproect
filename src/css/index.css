@@ -1,0 +1,1793 @@
+/* :::::::::::::::::::::::::::FONTS :::::::::::::::::::::::::::::::::::::::: */
+
+/* font-family: 'Nunito', sans-serif; */
+/* Light 300 */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+/* Regular 400 */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+/* Bold 700 */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+/* ------------------------------------------------------------------------------- */
+/* font-family: 'Exo 2', sans-serif; */
+/* Regular 400 */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+/* Bold 700 */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
+
+/* :::::::::::::::::::::::::::RESETS :::::::::::::::::::::::::::::::::::::::: */
+html, body {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	min-height: 100vh;
+  	margin:0; 
+
+	background-image: radial-gradient( rgba(218, 218, 218, 0.774) 0.05em, var(--clor-wsmoke) 0.1em);
+	background-size: 1em 1em;
+
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+* {
+  font-size: 1em;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 1.2; 
+  margin: 0;
+  padding:0;  
+}
+
+ul, ol { 
+	list-style-type: none;
+}
+  
+img{
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	vertical-align: bottom;
+}
+
+/* :::::::::::::::::::::::::::VARIABLES :::::::::::::::::::::::::::::::::::::::: */
+html {
+    /*VAR FONTS*/
+--fnt-nuni: Nunito, Verdana, Geneva, Tahoma, sans-serif;  /*main font*/
+--fnt-exo2:'Exo 2',Arial, Helvetica, sans-serif;
+    /*VAR FONTS SIZE*/
+--fsize-xs:0.6em;
+--fsize-s:0.8em;
+--fsize-reg:1em;
+--fsize-l:1.2em;
+--fsize-xl:1.4em;
+--fsize-xxl:1.5em;
+   /*VAR COLORS*/
+--ctheme-c-red:#E3396A;   /*--main  theme colors*/
+--ctheme-dawn:#999897;    /*--main  theme colors*/
+--ctheme-malibu:#77CDF3;    /*--main  theme colors*/
+--clor-silver:#C9C9C9;
+--clor-white:#FFF;
+--clor-wsmoke:#EFEFEF;
+--clor-black:#000;
+--clor-dim-gray:#707070;
+/* VAR PADDGINS MARGINS */
+--common-gap: 0.5em;
+--common-padding:1em;
+--common-bradius:0.2em;
+--newleft:35%; /* -- to calulate left value for a absolute item*/
+--dimsize: 2em;
+
+}
+
+
+/* :::::::::::::::::::::::::::STYLE HTML ELEMENTS :::::::::::::::::::::::::::::::::::::::: */
+
+/* ===================================================================
+								HEADER
+   =================================================================== */
+/* ---------- GRID CONTAINER HEADER----------  */
+.page-header {
+	align-items: center;
+	background-color: var(--clor-black);
+
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	grid-template-areas: 
+	"logo prod menu"
+	"srch srch srch"
+	"navi navi navi";
+	gap:var(--common-gap);
+	justify-content: space-between;
+
+	color:var(--clor-silver); 
+	font-family:var(--fnt-nuni);
+	font-size:var(--fsize-reg);
+	
+	
+	padding:var(--common-padding) calc(var(--common-padding)*1.5);
+	width:auto;
+	max-width: 100%;
+	
+}
+
+
+/* ---------- HEADER GRID ITEMS ----------  */
+
+/* --- logo */
+.logo {
+  grid-area: logo;
+  width:auto;
+  max-width: 7em;
+}
+
+/* ========  LIKE AND SHOPPING CART ======= */
+/* --- like and shopping cart container*/
+.your-products {
+	grid-area: prod;
+	display: flex;
+	gap:var(--common-gap);
+	background-color: transparent;
+}
+
+/* --- like and shopping cart icons*/
+.your-products .material-icons{
+	font-size: var(--fsize-xxl);
+	color:var(--clor-silver);
+}
+
+/* --- like and shopping cart icons when hover*/
+.your-products .material-icons:hover {
+	color:var(--ctheme-c-red);
+}
+
+/* ========  TOGGLE BUTTON MENU ======= */
+/* --- toggle button menu*/
+.nav-toggle {
+	grid-area: menu;
+	background-color: transparent;
+	border-color:var(--clor-black);
+	cursor: pointer;
+	width: 1.5em;
+	height: 1.5em;
+
+	
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.openMenuBtn {
+	background-image: url("../img/openBtnMenu-01.svg");
+}
+
+.closeMenuBtn {
+	background-image: url("../img/close-x-01.svg");
+	border-color: var(--ctheme-malibu);
+	background-size: 1em;
+}
+
+
+
+
+
+/* ================  SEARCH FORM =============== */
+/* --- form search container */
+.search {
+	align-items:center;
+	display: flex;
+    grid-area: srch;
+	gap:calc(var(--common-gap)*2);
+	justify-content: space-between;
+}
+
+/* --- Search label*/
+.search label {
+	align-items:inherit;
+	display: flex;
+	flex: 1 1 auto;
+	gap:calc(var(--common-gap)*2);
+	justify-content: space-between;
+	line-height:0.7;
+}
+
+/* --- Search Input*/
+.ibox-srch {
+	flex: 1 1 auto;
+	border:none;
+	border-bottom: 0.05em solid var(--ctheme-c-red);
+	background-color: var(--clor-black);
+	color:inherit;
+	padding: 0.3em var(--common-padding);
+	width: 8em;
+}
+
+/* --- Search Input when focus */
+.ibox-srch:focus {
+	outline: none;
+	border-bottom: 0.05em solid var(--ctheme-malibu);
+}
+
+/* --- Search Input cutomize cancel button */
+.ibox-srch:focus::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+    height: 0.8em;
+    width: 0.8em;
+	background-image: url("../img/close-x-01.svg");
+}
+
+/* --- Search Input placeholder-- */
+.ibox-srch::placeholder{ 
+	opacity:0.9;
+	color: inherit;
+	font-size: var(--fsize-s);
+}
+
+/* --- search button*/
+.search button {
+	background-color: transparent;
+	border-color: var(--clor-black);
+	flex: 0 1 auto;
+	justify-self: flex-end;
+	cursor: pointer;
+}
+/* --- search button icon*/
+.search button .material-icons{
+	font-size: var(--fsize-xxl);
+	color: var(--ctheme-c-red);
+} 
+/* --- search button icon when focus*/
+.search button:focus {
+border-color: var(--ctheme-malibu);
+}
+
+
+/* ================  NAVIGATION MENU =============== */
+/* --- Nav for navigation menu items-- */
+.navigation {
+	grid-area: navi;
+	position: relative;
+	font-family: var(--fnt-nuni); 
+	font-size: var(--fsize-xxl);
+	color: var(--clor-wsmoke);
+	display: flex;
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	top: -2em;
+	left:-1em;
+	right: -1em;
+	position:absolute;
+	background-color: rgb(0, 0, 0);
+	z-index: 1;
+	padding: 1em;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	gap: 1em;
+	min-width: 100%;
+	height: 50em;
+	
+}
+
+.menu li {
+padding:1em 0 0 2em;
+
+}
+
+.menu li a{
+color: inherit; 
+}
+
+/* menu items hover */
+.menu li a:hover{
+	color: var(--ctheme-malibu);
+	font-weight: bolder;
+	text-decoration: underline;
+	text-underline-position: under;
+	text-decoration-thickness: 0.25em;
+}
+
+
+/* ===================================================
+						MAIN 
+   =================================================== */
+ /* -- products container (MAIN)  */
+   .products {
+	position: relative;
+}
+
+/* ----------------MAIN HEADER ITEM ON SALE---------- */
+/* ---header container for the main onsale product-------    */
+.heading{
+	color:var(--clor-white);
+	font-size: var(--fsize-reg);
+	font-family:var(--fnt-nuni);
+	font-weight:lighter;
+	text-align: center;
+	position: relative;
+}
+
+/* --- General font style for header elements ---   */
+.heading * { 
+	font-size: inherit;
+	font-family:inherit;
+	font-weight:inherit;
+	text-align: inherit;
+}
+
+/* photo main on sale item */
+.img-onsale{
+	box-shadow:  0 0 10px rgb(90, 90, 90);
+}
+
+/* ======= Onsale description (overlapping  on onsale picture)=======  */
+/* --- Container for onsale description*/
+.bg-onsale-pgraph{
+	align-items:center;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-evenly;
+
+	height: 100%;
+	width: calc(100% - var(--newleft));	
+	left:var(--newleft);
+	bottom: 0;
+	position: absolute;		
+}
+/* ---cathcy phrase color grey */
+.onsale-pgraph {
+	font-size: var(--fsize-xl);
+    color:var(--ctheme-dawn);
+	line-height:0.7;
+    text-shadow: 
+	0 0 0.05em var(--clor-black),
+	0 0 0.07em rgb(221, 221, 221);
+}
+/* ---cathcy phrase color blue */
+.onsale-pgraph span{
+    color:var(--ctheme-malibu);
+    text-shadow: 
+	0 0 0.05em var(--clor-black),
+	0 0 0.5em rgba(176, 238, 253, 0.6),
+	0 0 0.5em rgba(176, 235, 253, 0.6),
+	0 0 0.5em rgba(92, 90, 200, 0.6);
+}
+
+/* -- onsale cathegory paragraph*/
+.onsale-cagory {
+	font-size: var(--fsize-xs);
+}
+/* -- highlight text from onsale cathegory paragraph*/
+.onsale-cagory span:nth-child(even){
+	color: var(--ctheme-c-red);
+	font-family:var(--fnt-exo2);
+	padding-left:0.3em;
+	text-transform: uppercase;
+}
+/* -- on sale shop now botton */
+.btn-onsale {
+	height: auto;
+	padding: calc(var(--common-padding)/2) calc(var(--common-padding)/2);
+	background-color:var(--clor-dim-gray);
+	font-family:var(--fnt-nuni) ;
+	font-size: var(--fsize-xs);
+	color:var(--ctheme-malibu);
+	text-transform:uppercase ;
+	cursor: pointer;
+}
+
+
+.btn-onsale:hover span{
+	color:#8fdbfb;
+	font-weight: bolder; 
+	text-decoration: underline;
+	text-decoration-thickness: 0.25em;
+	text-underline-position: under;
+}
+
+
+
+/* ===================================================
+                   FILTERS 
+===================================================*/
+/* -- Main container for filters */
+
+
+.filters{
+	display:flex;
+	flex-direction: column;
+	gap: calc(var(--common-gap) *2);
+	padding:var(--common-padding);
+
+	color: var(--ctheme-dawn);
+	font-family: var(--fnt-nuni);
+	font-size: var(--fsize-s);
+
+	background-color:var(--clor-wsmoke);
+}
+
+/* --toggle the position of the filter container */
+.makeFloat{
+	position: absolute;
+	top:-9.5em;
+	right:0;
+	flex: 1 0 auto;
+	width: 100%;
+	height: 100%; 
+}
+/* --container  for filter options */
+.filter-options{
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--common-padding)*2);
+	overflow:auto; 
+	height:40em;
+}
+
+
+
+/* update icon to close Filter options */
+.closeFilter {
+	background-image: url("../img/close-x-01.svg");
+	background-size: 1em 1em;
+	background-position-y: center;
+}
+
+/* Update icon to open Filter options */
+.FilterOpen {
+	 background-image: url("../img/filter-icon-01-01.svg");
+	 background-size: 1em 1em;
+	 background-position-y: center;
+}
+
+
+/* --button to toggle the filter options */
+.filter-opt-button {
+
+background-repeat: no-repeat;
+	border:none;
+	margin: var(--common-gap) 0;
+	padding-left:calc(var(--common-padding) * 1.5);
+	opacity: 0.6;
+
+	color: var(--clor-dim-gray);
+  	font-size: var(--fsize-l);
+	font-family: var(--fnt-exo2);
+	text-align: left;
+
+	cursor: pointer;
+}
+/* when hovering the button to toggle the filters */
+.filter-opt-button:hover {
+	opacity:1;
+}
+
+
+/* contanier for clear filter and apply filter buttons */
+.filter-btn-collectio{
+	display: flex;
+	justify-content:flex-end;
+	padding: var(--common-padding);
+	box-shadow: 0 1em 1em -1em var(--ctheme-dawn);
+	gap: calc(var(--common-gap)*2);
+}
+
+/* clear filters button */
+.clear-filter {
+	padding: calc(var(--common-padding)/2) var(--common-padding);
+	font-weight: bold;
+	color:var(--ctheme-malibu);
+	border: 0.05em solid var(--ctheme-malibu);
+	background-color: transparent;
+
+}
+
+/* hovering filters button */
+.clear-filter:hover {
+	border: 0.05em solid #5ea1be;
+	background-color: rgb(230, 230, 230);
+
+}
+
+/* apply filters button */
+.aplly-filter {
+	padding: calc(var(--common-padding)/2) var(--common-padding);
+	font-weight: bold;
+	color:var(--clor-wsmoke);
+	border: 0.05em solid var(--ctheme-dawn);
+	background-color:var(--clor-dim-gray);
+}
+/* hovering apply filters button */
+.aplly-filter:hover {
+	border: 0.05em solid #727272;
+	background-color: #3b3b3b;
+	color: var(--clor-white);
+}
+
+
+/* container for each filter options */
+.filter-options fieldset{	
+	display: flex;
+	flex-grow: 1;
+	gap: calc(var(--common-gap) *2);
+	padding: var(--common-padding);
+	border: none;
+	}
+
+/* name (legend) of the filter option	 */
+.filter-options legend{
+	color: var(--clor-dim-gray);
+	font-size: var(--fsize-l);
+
+}
+
+/* List of filters for each filter option */
+.filter-list{
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	gap:var(--common-gap);
+
+	border-top: 0.01em solid var(--clor-silver);
+	padding-top: var(--common-padding);
+
+}
+
+/* --toggle display property none */
+.hide {
+	display: none;
+}
+
+.custom-checkbox {
+	display: flex;
+	cursor: pointer;
+}
+
+.custom-checkbox > span {
+	padding:  0 0.5em;
+}
+
+.custom-checkbox > input {
+	height: 1em;
+	width: 1em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	background-image: url(../img/check-icon-01-01.svg);
+	border-radius: 0.3em;
+}
+
+.custom-checkbox > input:checked {
+	background-image: url(../img/check-icon-02-02.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: none;
+}
+
+.custom-radio {
+	display: flex;
+	cursor: pointer;
+}
+
+.custom-radio > span {
+	padding:  0 0.5em;
+}
+
+.custom-radio > input {
+	height: 0.8em;
+	width: 0.8em;
+	margin-top: 0.4em;
+	margin-right: 0.4em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	background-color: #ffffff;
+	border-radius: 0.3em;
+}
+
+.custom-radio > input:checked {
+	background-color: #77CDF3;
+
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ 			CHECKBOX AND RADIO BUTTONS FOR FILTER LIST
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* ---- hide Checkbox icons styles */
+/* input[type="checkbox"], input[type="radio"] {
+	display: none;
+} */
+/* input[type="checkbox"] {
+	appearance: none;
+}
+input[type="checkbox"]  {
+	background-image: url("../img/check-icon-01-01.svg");
+} */
+/* input[type="checkbox"]  + label {
+	background-image: url("../img/check-icon-01-01.svg");
+} */
+/* height: 0.9em;
+    width: 0.9em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    border: 1px solid var(--darker);
+    background-color: var(--mocha);
+    border-radius: 0.3em; */
+		/* .my-checkbox > input:checked {
+			background-image: url(/b847921….svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			border: none;
+	}
+	
+
+
+
+	
+	src/img/check-icon-02-02.svg
+	*/
+/* input[type=checkbox] + label, input[type=checkbox]:checked + label {
+	background-repeat: no-repeat;
+	text-align: left;
+	padding-left: calc(var(--common-padding) * 2);
+	cursor: pointer;
+}
+
+
+input[type=checkbox] + label {	
+	background-image: url("../img/check-icon-01-01.svg");
+}
+
+input[type=checkbox]:hover + label {	
+	color: var(--clor-dim-gray);
+}
+
+
+input[type=checkbox]:checked + label {	
+	background-image: url("../img/check-icon-02-02.svg");
+	color: var(--clor-dim-gray);
+} */
+
+
+/* ---- Radio buttons ( rating star icons styles) */
+
+/* fon color for radio button */
+input[type=radio] + label {
+	color: var(--ctheme-c-red);
+	cursor: pointer;
+}
+
+/* change label color when hovering radio button */
+input[type=radio]:hover + label{
+	color: #c4305a;
+	cursor: default;
+}
+
+/* change label color when hovering radio button */
+input[type=radio]:checked + label{
+	color: var(--ctheme-malibu);
+	cursor: none;
+}
+
+/* color for ratin start icons */
+.filter-list .material-icons{
+	color: inherit;
+}
+
+
+/* ===================================================
+                   RESULTS 
+=================================================== */
+
+/* --container for results section (to display the products) */
+.results {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--common-gap)*3);
+
+	background-color: transparent;
+	padding:var(--common-padding);
+
+	color:var(--ctheme-dawn);
+	font-size: var(--fsize-reg);
+	font-family: var(--fnt-nuni);
+
+	
+}
+
+/* --container for results subheading and sort by options */
+.results-hding {
+	
+	
+	display:grid;
+	grid-template-columns: 1fr, 1fr;
+    grid-template-areas: ". ."; 
+	justify-content: space-between;
+	gap:var(--common-gap);
+	
+
+	color:var(--ctheme-malibu);
+	font-size: var(--fsize-xxl);
+	font-family: var(--fnt-exo2);
+	font-weight: bolder;
+	vertical-align: middle;
+}
+
+.results-subheading {
+	
+	display: flex;
+	flex-direction: column;
+	gap: var(--common-gap);
+	
+}
+
+/* results subheading */
+.subheading {
+	font-weight: inherit;
+}
+
+.qtyResults {
+	font-weight: inherit;
+	font-size:var(--fsize-xs);
+	color: var(--clor-dim-gray);
+}
+
+/* container for sort by label and sort by options */
+.sort-options {
+	display: flex;
+	flex-direction: column;
+	gap: var(--common-gap);
+
+	align-items: flex-start;
+	border-color: var(--clor-silver); 
+	border-radius: var(--common-bradius);
+
+	color: var(--ctheme-dawn);
+	font-family: var(--fnt-nuni);
+	
+	font-size: var(--fsize-xs);
+	width: fit-content;
+	
+	
+
+	
+}
+
+.sort-label {
+	padding-left: calc(var(--common-padding)/4);
+	font-size: inherit;
+}
+
+/* --sort by options */
+.sort-options select{
+	
+	padding: 0;
+
+	outline: none;
+	cursor: pointer;
+	border: none;
+
+	color:inherit;
+	font-size: inherit;	
+	font-weight: bolder;
+	background-color: transparent;
+	width: fit-content;
+
+}
+
+/* ===================================================
+                   PRODUCT 
+=================================================== */
+/* container for each product in the result section */
+.product {
+	display: flex;
+	flex-direction: column;
+	gap:var(--common-gap);
+
+	font-family: inherit;
+
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+/* hovering container for each product */
+.product:hover {	
+	padding: calc(var(--common-padding)/4);
+ 	box-shadow: 0px 15px 37px -15px rgba(174,174,174,0.93)
+}
+
+/* container for a short description of the product */
+.product header{
+	display:flex;
+	flex-direction: column;
+	gap:calc(var(--common-gap) *2);
+}
+
+/* -- Add shadow to all image products */
+.product img {
+	box-shadow: -0.2em 0.2em 0.2em rgb(160, 160, 160); 
+	max-width: 100%;
+  }
+  
+
+  /* container for the product description (name and price) */
+.prod-name-price {
+	display:flex;
+	justify-content:space-between;
+	align-items: flex-end;
+	gap:1em;
+}
+
+/* common properties for name and price */
+.prod-name-price h3{
+	font-size: inherit;
+	font-weight: bolder;
+	line-height: 1.2;
+}
+
+/* regular price */
+.prod-name-price del{
+text-decoration:line-through;
+padding-right: 0.5em;
+color:var(--ctheme-c-red);
+}
+
+/* on sale price */
+.prod-name-price ins{
+	color:var(--ctheme-malibu);
+	font-family: var(--fnt-exo2);
+	font-size: var(--fsize-xl);
+    text-shadow: 
+	0 0 0.05em var(--clor-black),
+	0 0 0.5em rgba(201, 239, 248, 0.6),
+	0 0 0.5em rgba(226, 222, 201, 0.6),
+	0 0 0.5em rgba(166, 165, 228, 0.6);
+}
+
+ /* container for the product description (short description and rate) */
+.prod-description-rate {  
+	display:flex;
+	align-content: flex-start;
+	justify-content:space-between;
+	gap:1em;
+}
+
+
+/* -- product description paragraph */
+.prod-description-rate p{
+	flex: 1 1 50%;
+	font-size: var(--fsize-reg);
+}
+
+/* -- start icons */
+.prod-description-rate dl{
+	color: var(--ctheme-c-red);
+}
+
+/* see mone anchor to the single product page */
+.see-more{
+	font: inherit;
+	color:inherit;
+	align-self: flex-start;
+	padding: calc(var(--common-padding)/2);
+	padding-left: 0;
+}
+
+/* hovering the see mone anchor */
+.see-more:hover{
+	color: var(--ctheme-c-red);
+	font-weight: bold;
+	font-size:var(--fsize-l);
+	text-decoration: underline;
+	text-underline-position: under;
+	text-decoration-thickness: 0.15em;
+}
+
+ /* container for the product information (Like and shopping cart icons) */
+.product footer{
+	display: flex;
+	gap:calc(var(--common-gap) *2);
+	justify-content: flex-end;
+}
+
+/* --common properties for Like and shopping cart icons */
+.product-like, .product-cart{
+	background-color: transparent;
+	background-repeat:no-repeat;
+	width:var(--dimsize);
+	height:var(--dimsize) ;
+	border:0;
+	cursor: pointer;
+}
+
+/* like icon */
+.product-like{
+	background-image: url("../img/like-icon1-01.svg");
+}
+
+/* like icon focus*/
+.product-like:focus{
+	background-image: url("../img/like-icon1-02-02.svg");
+}
+
+/* shopping cart icon */
+.product-cart{
+	background-image: url("../img/cart-icon1-01_shopping-cart-01.svg");
+}
+
+/* shopping cart icon focus */
+.product-cart:focus{
+	background-image: url("../img/cart-icon1-02_shopping-cart-02.svg");
+}
+
+
+
+/* ===================================================
+                   PAGINATION 
+=================================================== */
+
+/* common properties for pagination container and 
+list of the pages */
+.pagination, .pages{
+	display: flex;
+}
+
+/* pagination container */
+.pagination {
+	flex-direction: column;
+	align-items: center;
+	gap: calc(var(--common-gap) *2);
+	padding: var(--common-padding);
+
+	font-family: var(--fnt-nuni);
+	color: var(--ctheme-dawn);
+	font-size: var(--fsize-reg);
+
+	background-color: transparent;
+}
+
+/* display the amount of products founded */
+.pagination p{
+	align-self: flex-start;
+	font-size: var(--fsize-s);
+}
+
+/* container for  list pages*/
+.pages {
+	flex: 1 1 auto;
+	justify-content: space-between;
+	gap: calc(var(--common-gap) *2);
+	font-family: inherit;
+	color: var(--clor-dim-gray);
+	height: 2em;
+}
+
+/* list page */
+.pages li {
+	display: flex;
+	flex: 0 0 auto;
+	width: 2em;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+/* list page hover */
+.pages li:hover{
+	background-color: var(--ctheme-c-red);
+	box-shadow: 0 0.2em 1em rgb(195, 195, 195);
+	border-radius: var(--common-bradius);
+	color:whitesmoke;
+	font-weight:bold;
+	}
+
+/* anchor for each page */
+.pages li a{
+	color:inherit;
+	font-weight: inherit;
+}
+
+
+/* ===================================================
+						FOOTER
+   =================================================== */
+/* -------------- FLEX CONTAINER FOOTER--------------- */
+.page-footer{
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	gap: calc(var(--common-gap)*2);
+	padding-top: var(--common-padding);
+
+	background-color: var(--clor-silver);
+	box-shadow:  0 0 10px rgb(90, 90, 90);
+
+	color:var(--ctheme-dawn);
+	font-family:var(--fnt-nuni);
+	font-size: var(--fsize-reg);
+}
+
+
+/* --------------------FOOTER FLEX ITEMS ----------------- */
+/* --- Social icons, FLEX CONTAINER */
+.logofooter img{
+	width:5em;
+}
+
+/* solial icons list */
+.social{
+	display: flex;	
+	gap: var(--common-gap);
+	justify-content: space-between;
+}
+
+/* --- Social icons list items, FLEX CONTAINER*/
+.social li a {
+	align-items: center;
+	color: inherit;
+	display: flex;
+	flex-direction: column;
+	font-size: inherit;
+	font-family:inherit;
+	gap: var(--common-gap);
+}
+
+/* --- Nav legal, FLEX CONTAINER*/
+nav .legal {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* gap: var(--common-gap); */
+}
+   
+/* --- Text anchor legal items, FLEX CONTAINER*/
+.legal > li a {
+	display: flex;
+	color:inherit;
+	flex-direction: column;
+	font-size: inherit;
+	font-family:inherit;
+	text-decoration: underline;
+	padding:calc(var(--common-padding)/3.33) 0;
+
+}
+
+/* --- Slash division for anchor legal items*/
+.legal > li:nth-child(even){
+	color:var(--clor-black);
+	padding: calc(var(--common-padding)/3.33) var(--common-padding);
+}
+
+/* copyRights information  */
+.copyright {
+	background-color: var(--clor-black);
+	color:var(--clor-white);
+	font-size: var(--fsize-s);
+	font-family:inherit;
+	padding:calc(var(--common-padding)*1.5) 0;
+	width:100%;
+	text-align: center;
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++
+			SINGLE PRODUCT PAGE
++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* =======================================================
+			MAIN  (single product page)
+======================================================= */
+
+
+/* --main container for single product page */
+.prd-product{
+	display: grid;
+	background-color: whitesmoke;
+	padding:var(--common-padding);	
+	gap: calc(var(--common-gap)*2);
+}
+
+/* remove border for fieldset and add to cart button */
+.prd-description fieldset, .add-cart {
+	border: none;
+}
+
+/* container  for gallery the single item (big image and small pictures) */
+.prd-heading {
+	display:flex;
+	flex-direction: column;
+	
+	gap:calc(var(--common-gap)*1.5);
+	padding-bottom: var(--common-padding);
+}
+
+/* list of pictures for the gallery */
+.prd-heading-pictures {
+	display:flex;
+	justify-content: space-evenly;
+	flex: 1 1 auto;
+	padding: 0 var(--common-padding);
+	gap: calc(var(--common-gap)*2);
+}
+
+/* images of the gallery */
+.prd-heading-pictures li img {
+	object-fit: cover;
+	object-position: center top;
+}
+
+/* overing a picture item list */
+.prd-heading-pictures li:hover {
+	opacity: 0.5;
+	/* box-shadow: -0.2em 0.2em 0.2em rgb(160, 160, 160);  */
+}
+
+
+
+/* Containt for Description of the single product */
+.prd-description {
+	display: flex;
+	flex-direction: column;
+	color:var(--ctheme-dawn);
+	font-family: var(--fnt-nuni);
+	font-size: var(--fsize-reg);
+	gap:calc(var(--common-gap)*1.5);
+	
+}
+
+/* --inheriy font styles from the Description parent */
+.prd-description input, .overview-menu li a{
+	font-family: inherit;
+	color: inherit;
+}
+
+/* ---------------------------------------------------- */
+/* name of the item */
+.prd-description h3{
+	font-size: var(--fsize-l);
+	font-weight: bolder;
+}
+
+/* sub headings and fielset legend */
+/* --sub title for the product overview */
+h4, fieldset legend, .overview-submenu a{
+	font-size: var(--fsize-reg);
+	font-weight: bold;
+}
+
+/* rating information and regular price */
+
+.prd-description dd, .prd-description del{
+	color:var(--ctheme-c-red);
+}
+
+/* regular price */
+.prd-description del{
+	text-decoration:line-through;
+	padding-right: 0.5em;
+}
+
+/* on sale price */
+.prd-description ins{
+	color:var(--ctheme-malibu);
+	font-family: var(--fnt-exo2);
+	font-size: var(--fsize-xl);
+    text-shadow: 
+	0 0 0.05em var(--clor-black),
+	0 0 0.5em rgba(201, 239, 248, 0.6),
+	0 0 0.5em rgba(226, 222, 201, 0.6),
+	0 0 0.5em rgba(166, 165, 228, 0.6);
+}
+
+/* ---------------------------------------------------- */
+
+/* add padding to bulb color and overview sections */
+.bulb-color-field, .overview{
+	padding-top: calc(var(--common-padding)*2);
+}
+
+/* container for bulb colors */
+.bulb-color-options {
+	display:flex;
+	justify-content: flex-start;
+	gap: calc(var(--common-gap)*2);
+}
+
+/* item list of bulb color options */
+.bulb-color-options li{
+	padding: var(--common-padding) 0;
+}
+
+
+/*  color swatches bulb-color-options*/
+.bulb-white, .bulb-yellow, .bulb-rainbow  {
+	font-size: var(--fsize-s);	
+	text-align: center;
+	border: 0.03em solid var(--clor-silver);
+	box-shadow: 0 0.2em 1em rgb(195, 195, 195);
+	padding: calc(var(--common-padding)/2) ;
+	background-clip: content-box;
+	height: 6em;
+	width: 6em;
+}
+
+/*  color swatches bulb-color-options  focus*/
+.bulb-white:focus, .bulb-yellow:focus, .bulb-rainbow:focus{
+	border: 0.2em solid var(--clor-black);
+}
+
+/*  color swatches bulb-color-options  hover*/
+.bulb-white:hover, .bulb-yellow:hover, .bulb-rainbow:hover{
+	border: 0.05em solid var(--clor-black);
+}
+
+/* bulb-color white */
+.bulb-white {
+	color: rgb(197, 197, 197);
+	background-color: var(--clor-white);
+}
+
+/* bulb-color yellow */
+.bulb-yellow {
+	color: rgb(192, 192, 0);
+	background-color: yellow;
+}
+
+/* bulb-color rainbow */
+.bulb-rainbow {
+	color: var(--clor-white);
+	background-image: linear-gradient(54deg, 
+	rgba(244,40,12,1) 0%,
+	 rgba(203,195,53,1) 50%, 
+	 rgba(0,212,255,1) 100%);
+}
+/* -------------------------------------------------------- */
+
+
+/* quantity container  FLEX style */
+.qty-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: calc(var(--common-gap)*2);
+	padding-top: var(--common-padding);
+}
+
+ /* quantity buttons list  */
+.qty-buttons {
+	display: flex;
+	flex: 1 1 auto;
+	max-height: 100%;
+	height: 3em;
+
+}
+
+/* quantity buttons list items */
+.qty-buttons li {
+	display: flex;
+	flex-grow: 1;
+	
+}
+
+/* ------------ */
+
+/* -- make Qty bottons to grow (substract, inbox and add) */
+.qty-minu, .qty-plus, .qty-ibox  {
+	flex-grow:1 ;
+	max-width: 100%;   
+	width: 1em;
+	text-align: center;
+}
+
+/*  Qty butons color style*/
+/* -- quantity inbox and add to cart button */
+.qty-ibox,  .add-cart  {
+	background-color: transparent;
+	font-size: var(--fsize-l);
+}
+
+/* substract and add buttons */
+.qty-minu, .qty-plus {
+	color: var(--clor-black);
+	font-size: var(--fsize-xl);
+	background-color: transparent;
+	padding: 0 calc(var(--common-padding)/4);
+}
+
+/* substract and add buttons focus */
+.qty-minu:focus, .qty-plus:focus {
+	color: var(--clor-wsmoke);
+	background-color: var(--clor-dim-gray);
+}
+
+
+/* borders for quantity substract btn*/
+.qty-minu {
+	border-radius: 
+	calc(var(--common-bradius)*4) 0 0  calc(var(--common-bradius)*4);
+}
+/* borders for quantity inbox*/
+.qty-ibox {
+	outline: none;
+	border-left: none ;
+	border-right: none ;
+}
+
+/* placeholder for quantity inbox*/
+.qty-ibox::placeholder{
+	opacity:0.5;
+	color: inherit;
+	font-size: inherit;
+}
+
+/* borders for quantity add btn*/
+.qty-plus  {
+	border-radius:  
+	0 calc(var(--common-bradius)*4) calc(var(--common-bradius)*4) 0;  
+}
+
+/* --------- */
+
+/* add to cart button */
+.add-cart {
+	flex: 1 1 auto;
+	color: var(--clor-wsmoke);
+	background-color: var(--ctheme-c-red);
+	border-radius: calc(var(--common-bradius)*4) ;
+}
+
+/* add to cart button hover*/
+.add-cart:hover {
+	background-color: var(--clor-dim-gray);
+	box-shadow: 0 0.2em 1em rgb(195, 195, 195);
+}
+
+/* add to cart button focus*/
+.add-cart:focus {
+	background-color: rgb(243, 145, 136);
+	box-shadow: 0 0.2em 1em rgb(195, 195, 195);
+}
+
+/* ----------------------------------------------------------- */
+
+
+/* -- rate options color style */
+.rate-list li label span:last-child{
+	color: var(--clor-dim-gray);
+	padding-left: var(--common-padding);
+}
+
+/* add padding to rete lis container and overview container */
+.rate-list, .overview-menu
+{
+	padding: var(--common-padding) 0;
+}
+
+/* overview options */
+.overview-submenu {
+	padding: calc(var(--common-padding)/2) 0;
+}
+
+/* overview item list */
+.overview-submenu li{
+	padding: var(--common-padding) 0 0 var(--common-padding);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+							MEDIA QUERY 20em
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+@media screen and (min-width: 20em) {
+	html{
+		  /*VAR FONTS SIZE*/
+	--fsize-xs:0.6em;
+	--fsize-s:0.8em;
+	--fsize-reg:1em;
+	--fsize-l:1.2em;
+	--fsize-xl:1.4em;
+	--fsize-xxl:1.5em;
+	}
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+							MEDIA QUERY 28em
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@media screen and (min-width: 28em) {
+
+
+	/* update font sizes */
+	.heading{ font-size: var(--fsize-l);}
+	.onsale-pgraph {font-size: var(--fsize-xxl);}	
+	.onsale-cagory , .btn-onsale {font-size: var(--fsize-s);}
+	.qty-buttons { max-width: 30%; }
+
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+							MEDIA QUERY 40em
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+@media screen and (min-width: 40em) {
+	
+	/* update font sizes */
+	html{--fsize-xxxl:1.8em;}
+	.heading{ font-size: var(--fsize-l);}
+	.onsale-pgraph {font-size: var(--fsize-xxxl);}
+	.onsale-cagory , .btn-onsale {font-size: var(--fsize-s);}
+
+	.prd-description, h4, 
+	fieldset legend, .overview-submenu a {
+	font-size: var(--fsize-l);
+	}
+
+	.prd-description h3, 
+	.qty-ibox, .add-cart  {
+	font-size: var(--fsize-xl);
+	}
+
+	.prd-description ins, 
+	.qty-minu, .qty-plus {
+	font-size: var(--fsize-xxl);
+	}
+	/* --------------------------- */
+
+	 /* -- make a gird: products container (MAIN)  */
+	.products{
+	 display:grid;
+	 grid-template-columns: auto auto;
+	}
+
+	/* make products heading to spand 2 columns */
+	.heading {
+		grid-column: 1 / span 2;
+	}
+
+	/* make products heading to start in the second row line and spat one row*/
+	.filters {
+		background-color:transparent;
+		grid-row: 2 / span 3;
+		justify-content: flex-start;
+		position:static;
+	}
+
+
+	/* update value of the position to static for filter options */
+	.filter-options {
+		position:static;
+		overflow:visible;
+		height:auto;
+	}
+
+	/* make paginaion tart in the second column */
+	.pagination {
+		grid-column: 2;
+	}
+  }
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+							MEDIA QUERY 50em
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+  @media screen and (min-width: 50em) {
+
+
+	 /* update font sizes */
+	html{
+		/*VAR FONTS SIZE*/
+		--fsize-xxxl:2.2em;
+	}
+
+	.heading{ font-size: var(--fsize-xl);}  
+	.onsale-cagory , .btn-onsale {font-size: var(--fsize-s);}
+	.page-header {font-size:var(--fsize-l); }
+	.pagination {font-size: var(--fsize-xxl);}
+	
+
+	/* grid for the header of the page */
+	.page-header {
+		grid-template-columns: 1fr 1fr auto;
+		grid-template-areas: 
+		"logo srch prod"
+		"nav nav nav";
+		}
+	/* ------------------------------------------ */
+
+
+	/* hide label for search */
+	.search label span{
+		display: none;
+		}
+		
+	/* hide button menu */
+	.nav-toggle{
+		display: none;
+	}
+
+
+	/* menu navigator container */
+	.navigation {
+	
+		grid-area: nav;
+		height: auto;
+		/* max-height: fit-content; */
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 2em;
+		position: static;
+		font-size: var(--fsize-reg);
+	
+		
+		
+	}
+	 /* menu lists */
+	.menu{
+		background: rgb(51, 51, 51);
+		display: flex;
+		flex-direction: row;
+		flex:1 1 auto;
+		justify-content: space-evenly;
+		padding:calc(var(--common-padding)/2);
+		border-radius: var(--common-bradius);
+		position: relative;
+		height: auto;
+
+
+	}
+
+	/* menu list items */
+	.menu li{
+		display:flex;
+		flex-direction: column;
+		flex:1 1 auto;
+		padding:0;
+		
+			
+	}
+
+
+	/* hover submenu  light item list */
+	.menu .light:hover .submenu {
+		display: block; 
+		left: 3em;
+	}
+
+	/* hover submenu  shop item list */
+	.menu .shop:hover .submenu{
+		display: block; 
+		left: 14em;
+	}
+	
+	
+
+	
+	/* menu options */
+	.menu li a{
+		padding:0.3em;
+		text-align: center;
+	
+	
+	}
+
+	/* submenu list container */
+	.submenu{
+		display:none;
+		flex-direction: column;
+		justify-content: space-between;
+		position:absolute;
+		top: 2em;
+		z-index: 1;
+		padding:0.5em;
+	
+	
+	}
+
+		
+	/* submenu list itmes */
+	.submenu li{
+		/* border:0.03em solid rgb(240, 100, 100); */
+		flex:1 1 auto
+	}
+
+	/* submenu list itmes hover */
+	.submenu li a:hover{
+		color:#9fe1fd;
+		text-decoration:none ;
+		background-color:rgb(40, 153, 110);
+	}
+
+
+	/* submenu options */
+	.submenu li a{
+		background: rgb(0, 0, 0);	
+		text-align: left;
+	
+	}
+
+
+	/* ::::::::::::::::MAIN  (products)::::::::::::::::::::*/
+
+ /* -- products container (MAIN)  */
+	.products{display:block;}
+
+
+
+	/* change flex direction of the filters */
+	.filter-options{
+	/* background-color: black; */
+	flex-direction: row;
+	justify-content: space-between;
+	flex: 1 1 auto;
+	}
+
+	/* make results a grid container */
+	.results {
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		gap: calc(var(--common-gap)*3);
+	}
+ /* make results heading span 2 colums */
+	.results-hding {grid-column: 1 / span 3;}
+
+	/* update padding to the gallery picture for single product page */
+	.prd-heading-pictures{padding: 0 calc(var(--common-padding)*4);}
+  }
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+							MEDIA QUERY 60em
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+  @media screen and (min-width: 60em) {
+
+
+
+	.subheading {
+		font-size: var(--fsize-xxxl);
+	}
+
+	.qtyResults, .sort-options {
+		font-size: var(--fsize-s);
+	}
+
+	/* update grid Main FOR SINGLE PRODUCT PAGE */
+	.prd-product { grid-template-columns: 1fr 1fr; }
+
+	/* update border for the gallery for single product page */
+	.prd-heading-pictures{border-right: 0.05em solid var(--clor-silver);}
+
+
+	/* hover submenu  light item list */
+.menu .light:hover .submenu {
+	left: 4em;
+}
+
+/* hover submenu  shop item list */
+.menu .shop:hover .submenu{
+	left: 17em;
+}
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+							MEDIA QUERY 65em
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@media screen and (min-width: 65em) {
+
+
+
+	/* hover submenu  light item list */
+	.menu .light:hover .submenu {
+		left: 4.5em;
+	}
+	
+	/* hover submenu  shop item list */
+	.menu .shop:hover .submenu{
+		left: 18.5em;
+	}
+
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+							MEDIA QUERY 70em
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+  @media screen and (min-width: 70em) {
+
+	
+
+	/* hover submenu  light item list */
+	.menu .light:hover .submenu {
+		left: 4em;
+	}
+	
+	/* hover submenu  shop item list */
+	.menu .shop:hover .submenu{
+		left: 17em;
+	}
+
+	/* --------------------------------------------- */
+
+		/* Update font size */
+	html{
+		/*VAR FONTS SIZE*/
+		--fsize-xxxl:2.5em;
+		--fsize-xxl:1.7em;
+  	}
+	  
+	.page-header {font-size:var(--fsize-xl); }
+  	.onsale-cagory , .btn-onsale {font-size: var(--fsize-l);}
+	.filters{ font-size: var(--fsize-reg);}
+  	.filter-options legend {font-size: var(--fsize-xl);}
+  	.menu li{ font-size: var(--fsize-r);}
+
+/* ----------------------------------------------- */
+
+	/* Make Results to be a GRID CONTAINER */
+	.results{grid-template-columns: 1fr 1fr 1fr;}
+	/* make heading result span 3 columns */
+	.results-hding {grid-column: 1 / span 3;}
+
+  }
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+							MEDIA QUERY 90em
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+  @media screen and (min-width: 90em) {
+	/* update font size */
+	.page-header {font-size:var(--fsize-xxl); }
+	.menu li{font-size: var(--fsize-reg);}
+
+	
+
+	/* hover submenu  light item list */
+	.menu .light:hover .submenu {
+		left: 4.2em;
+	}
+	
+	/* hover submenu  shop item list */
+	.menu .shop:hover .submenu{
+		left: 18em;
+	}
+
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+							MEDIA QUERY 90em
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+@media screen and (min-width: 90em) {
+
+
+	
+
+	/* hover submenu  light item list */
+	.menu .light:hover .submenu {
+		left: 5.5em;
+	}
+	
+	/* hover submenu  shop item list */
+	.menu .shop:hover .submenu{
+		left: 22em;
+	}
+
+	
+
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:none;stroke:#E3396A;stroke-width:1.7872;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:#878685;}
+	.st3{fill:none;stroke:#878684;stroke-width:0.9168;stroke-linecap:round;stroke-linejoin:round;}
+	.st4{fill:none;stroke:#878684;stroke-width:1.0126;stroke-linecap:round;stroke-linejoin:round;}
+	.st5{fill:url(#Path_22_4_);}
+	.st6{fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:url(#Path_23_4_);stroke-miterlimit:10;}
+	.st8{fill:url(#Ellipse_2_4_);}
+	.st9{fill:url(#Ellipse_3_4_);}
+	.st10{fill:url(#Path_22_5_);}
+	.st11{fill:none;stroke:url(#Path_23_5_);stroke-miterlimit:10;}
+	.st12{fill:url(#Ellipse_2_5_);}
+	.st13{fill:url(#Ellipse_3_5_);}
+</style>
+<g id="shoping_cart_3_" transform="translate(1 1)">
+	<radialGradient id="Path_22_4_" cx="7.656" cy="2.138" r="13.7991" gradientUnits="userSpaceOnUse">
+		<stop  offset="5.562841e-02" style="stop-color:#999999"/>
+		<stop  offset="0.4248" style="stop-color:#8C8929"/>
+		<stop  offset="0.852" style="stop-color:#878684"/>
+	</radialGradient>
+	<path id="Path_22_3_" class="st5" d="M16.6,8.2l-8.6,2.5L6.2,1.7l10.2,0.1c0.5,0,1,0.4,1,1v4.5C17.5,7.7,17.1,8.1,16.6,8.2z"/>
+	<radialGradient id="Path_23_4_" cx="8.9749" cy="7.0956" r="7.3089" gradientUnits="userSpaceOnUse">
+		<stop  offset="5.562841e-02" style="stop-color:#999999"/>
+		<stop  offset="0.4248" style="stop-color:#8C8929"/>
+		<stop  offset="0.852" style="stop-color:#878684"/>
+	</radialGradient>
+	<path id="Path_23_3_" class="st7" d="M1,1h3.8l2,10l-1.6,2.1H17"/>
+	<radialGradient id="Ellipse_2_4_" cx="8.1596" cy="15.5" r="2.2059" gradientUnits="userSpaceOnUse">
+		<stop  offset="5.562841e-02" style="stop-color:#999999"/>
+		<stop  offset="0.4248" style="stop-color:#8C8929"/>
+		<stop  offset="0.852" style="stop-color:#878684"/>
+	</radialGradient>
+	<ellipse id="Ellipse_2_3_" class="st8" cx="8.8" cy="16" rx="1.5" ry="1.5"/>
+	<radialGradient id="Ellipse_3_4_" cx="14.9752" cy="16.0386" r="1.4718" gradientUnits="userSpaceOnUse">
+		<stop  offset="5.562841e-02" style="stop-color:#999999"/>
+		<stop  offset="0.4248" style="stop-color:#8C8929"/>
+		<stop  offset="0.852" style="stop-color:#878684"/>
+	</radialGradient>
+	<ellipse id="Ellipse_3_3_" class="st9" cx="15" cy="16" rx="1.5" ry="1.5"/>
+</g>
+</svg>
